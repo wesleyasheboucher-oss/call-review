@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Call Review overview</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f8fafd}
+a{color:#2a65c7;text-decoration:none}a:hover{color:#2350a8}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1180px; background: #f8fafd; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1e232d">
+
+<!-- Sidebar -->
+<nav aria-label="ROM CRM" style="flex: 1 0 240px; max-width: 100%; box-sizing: border-box; background: #ffffff; border-right: 1px solid #e0e3e7; padding: 0 8px 24px; display: flex; flex-direction: column">
+<div style="height: 64px; display: flex; align-items: center; justify-content: center">
+<img src="./romcrm-logo.png" alt="ROM CRM" style="width: 200px; height: auto; filter: drop-shadow(0 1px 1px rgba(15,23,42,0.25)) drop-shadow(0 2px 4px rgba(15,23,42,0.18))">
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>ROM CRM</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></div>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 7px 12px; border-radius: 8px; font-size: 14px; color: #2a2f38"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#373b45" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>Home</a>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Market Access</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>ELCAP</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Sales</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Clinical Services</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>RCM</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Quality</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div>
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; padding: 7px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; color: #2350a8; background: #eff6ff"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2a65c7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call Review</a>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Admin</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+</nav>
+
+<!-- Content -->
+<main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 24px 40px 48px">
+<h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Call Review</h1>
+<p style="margin: 10px 0 0; font-size: 15px; color: #525761">Order health from call activity and what's said on the phone</p>
+
+<!-- View tabs + line of business -->
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 24px">
+<div role="tablist" aria-label="Call Review views" style="display: flex; gap: 6px">
+<a href="#" role="tab" aria-selected="true" style="padding: 7px 12px; border-radius: 6px; background: #2350a8; color: #ffffff; font-size: 14px; font-weight: 600">Overview</a>
+<a href="#" role="tab" aria-selected="false" style="padding: 7px 12px; border-radius: 6px; color: #373b45; font-size: 14px">Calls</a>
+<a href="Settings.dc.html" role="tab" aria-selected="false" style="padding: 7px 12px; border-radius: 6px; color: #373b45; font-size: 14px">Flag settings</a>
+</div>
+<div role="group" aria-label="Line of business" style="display: flex; padding: 3px; background: #f1f4f7; border: 1px solid #e0e3e7; border-radius: 8px">
+<button type="button" onClick="{{pickOrtho}}" aria-pressed="{{orthoOn}}" style="{{orthoStyle}}">Ortho</button>
+<button type="button" onClick="{{pickCardiac}}" aria-pressed="{{cardiacOn}}" style="{{cardiacStyle}}">Cardiac</button>
+</div>
+</div>
+
+<!-- Headline numbers -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px">
+<div style="background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px"><div style="font-size: 13px; color: #525761">{{lobName}} orders in poor health</div><div style="font-size: 32px; font-weight: 700; color: #a3241a; margin-top: 6px">[##]</div><div style="font-size: 13px; color: #525761; margin-top: 4px">[+# vs last 30 days]</div></div>
+<div style="background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px"><div style="font-size: 13px; color: #525761">{{lobName}} orders at risk</div><div style="font-size: 32px; font-weight: 700; color: #8f5214; margin-top: 6px">[##]</div><div style="font-size: 13px; color: #525761; margin-top: 4px">[+# vs last 30 days]</div></div>
+<div style="background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px"><div style="font-size: 13px; color: #525761">Repeat callers with flags</div><div style="font-size: 32px; font-weight: 700; margin-top: 6px">[##]</div><div style="font-size: 13px; color: #525761; margin-top: 4px">{{repeatRule}}</div></div>
+<div style="background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px"><div style="font-size: 13px; color: #525761">Dropped incoming calls</div><div style="font-size: 32px; font-weight: 700; margin-top: 6px">[##]</div><div style="font-size: 13px; color: #525761; margin-top: 4px">Patient called us, call dropped</div></div>
+</div>
+
+<!-- Where flagged orders sit -->
+<div style="margin-top: 20px; background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<h2 style="margin: 0; font-size: 15px; font-weight: 600">Where flagged {{lobLower}} orders sit</h2>
+<span style="font-size: 13px; color: #525761">Click an area to filter the list</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 8px; margin-top: 14px">
+<sc-for list="{{areas}}" as="a" hint-placeholder-count="7">
+<button type="button" style="{{a.style}}"><span style="display: block; font-size: 12px; color: #525761">{{a.name}}</span><span style="display: block; font-size: 22px; font-weight: 700; margin-top: 4px; color: #1e232d">[#]</span></button>
+</sc-for>
+</div>
+</div>
+
+<!-- Filters -->
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px">
+<button type="button" style="display: flex; align-items: center; gap: 24px; height: 38px; padding: 0 14px; border: 1px solid #bcd2f3; background: #eff6ff; color: #2350a8; border-radius: 8px; font: inherit; font-size: 14px">Poor health<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+<button type="button" style="display: flex; align-items: center; gap: 24px; height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; background: #fff; color: #1e232d; border-radius: 8px; font: inherit; font-size: 14px">All areas<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+<button type="button" style="display: flex; align-items: center; gap: 24px; height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; background: #fff; color: #1e232d; border-radius: 8px; font: inherit; font-size: 14px">All statuses<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+<button type="button" style="display: flex; align-items: center; gap: 24px; height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; background: #fff; color: #1e232d; border-radius: 8px; font: inherit; font-size: 14px">All flags<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+<button type="button" style="display: flex; align-items: center; gap: 24px; height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; background: #fff; color: #1e232d; border-radius: 8px; font: inherit; font-size: 14px">All teams<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+<button type="button" style="display: flex; align-items: center; gap: 24px; height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; background: #fff; color: #1e232d; border-radius: 8px; font: inherit; font-size: 14px">Last 30 days<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+<span style="margin-left: auto; font-size: 14px; color: #525761">Showing <b style="color: #1e232d">4</b> of [###]</span>
+</div>
+
+<!-- Orders table -->
+<div style="margin-top: 14px; background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; overflow-x: auto">
+<table style="width: 100%; min-width: 1040px; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="background: #f1f4f7; text-align: left; color: #525761; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em">
+<th scope="col" style="padding: 12px 20px; font-weight: 600">Patient / order</th>
+<th scope="col" style="padding: 12px; font-weight: 600">Area · order status</th>
+<th scope="col" style="padding: 12px; font-weight: 600">Health</th>
+<th scope="col" style="padding: 12px; font-weight: 600">Incoming calls</th>
+<th scope="col" style="padding: 12px; font-weight: 600">Flags hit</th>
+<th scope="col" style="padding: 12px 20px; font-weight: 600">Last call</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+<tr style="border-top: 1px solid #e0e3e7">
+<td style="padding: 16px 20px; vertical-align: top">
+<a href="OrderDrawer.dc.html" style="font-weight: 600; font-size: 15px; color: #2350a8">[Patient name]</a>
+<div style="color: #525761; margin-top: 3px; font-size: 13px">[Order #] · {{lobName}}</div>
+</td>
+<td style="padding: 16px 12px; vertical-align: top">
+<div style="font-weight: 600">{{r.area}}</div>
+<div style="color: #525761; margin-top: 3px; font-size: 13px">{{r.status}}</div>
+<div style="color: #525761; margin-top: 2px; font-size: 13px">Owner: {{r.owner}}</div>
+</td>
+<td style="padding: 16px 12px; vertical-align: top">
+<span style="{{r.healthStyle}}">{{r.health}}</span>
+<div style="color: #525761; margin-top: 6px; font-size: 13px">Score [##]</div>
+</td>
+<td style="padding: 16px 12px; vertical-align: top">
+<div style="font-weight: 600">{{r.calls}}</div>
+<div style="color: #525761; margin-top: 3px; font-size: 13px">{{r.multiplier}}</div>
+</td>
+<td style="padding: 16px 12px; vertical-align: top">
+<div style="display: flex; flex-wrap: wrap; gap: 6px; max-width: 320px">
+<sc-for list="{{r.flags}}" as="f" hint-placeholder-count="2">
+<span style="{{f.style}}">{{f.label}}</span>
+</sc-for>
+</div>
+</td>
+<td style="padding: 16px 20px; vertical-align: top; color: #373b45">{{r.last}}<div style="color: #525761; margin-top: 3px; font-size: 13px">[Agent] · {{r.team}}</div></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<p style="font-size: 12px; color: #5f636d; margin: 12px 4px 0">Sample rows for layout only. Names, orders and counts are placeholders. Order statuses follow today's IOMS (ortho) and cardiac sequences.</p>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { lob: 'ortho' }; }
+  renderVals() {
+    var self = this;
+    var lob = this.state.lob;
+    var pill = 'display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600;';
+    var H = { Poor: pill + 'background:#fde8e6;color:#a3241a;', 'At risk': pill + 'background:#faeacf;color:#8f5214;', Watch: pill + 'background:#dcf2ff;color:#005993;' };
+    var F = { cancel: pill + 'background:#fde8e6;color:#a3241a;', neg: pill + 'background:#faeacf;color:#8f5214;', other: pill + 'background:#eef1f5;color:#373b45;' };
+    function fl(l, k) { return { label: l, style: F[k] }; }
+    var seg = 'padding:6px 16px;border:0;border-radius:6px;font:inherit;font-size:14px;cursor:pointer;';
+    var on = seg + 'background:#ffffff;color:#2350a8;font-weight:600;box-shadow:0 1px 2px rgba(15,23,42,0.12);';
+    var off = seg + 'background:transparent;color:#525761;';
+    var areaBox = 'text-align:left;padding:12px;border-radius:10px;font:inherit;cursor:pointer;';
+    var areaNames = lob === 'ortho'
+      ? ['Intake', 'Verification', 'Pending Auth', 'Patient Sales', 'Cleared for Delivery', 'Treatment', 'Billing']
+      : ['Intake', 'Clinical Eligibility', 'Insurance Eligibility', 'Go/No-Go', 'Logistics', 'Enrolled in CR', 'Discharge'];
+    var hot = lob === 'ortho' ? 'Pending Auth' : 'Insurance Eligibility';
+    var areas = areaNames.map(function (n) {
+      return { name: n, style: areaBox + (n === hot ? 'background:#fdf6ec;border:1px solid #f4d3a1;' : 'background:#f8fafd;border:1px solid #e0e3e7;') };
+    });
+    var rows = lob === 'ortho' ? [
+      { area: 'Pending Auth', status: 'WIP 17 · Pending Authorization', owner: 'HRC', health: 'Poor', calls: '6 incoming', multiplier: '×3 repeat multiplier', flags: [fl('Cancellation', 'cancel'), fl('Negative sentiment', 'neg'), fl('Escalation', 'neg')], last: 'Today, 10:42 AM', team: 'Customer Service' },
+      { area: 'Cleared for Delivery', status: 'WIP 19.1 · Cleared for Delivery, Pending Auth', owner: 'Logistics', health: 'Poor', calls: '4 incoming', multiplier: '×2 repeat multiplier', flags: [fl('Delay talk', 'neg'), fl('Dropped incoming', 'other')], last: 'Yesterday, 4:15 PM', team: 'HRC' },
+      { area: 'Verification', status: 'WIP 12 · Insurance Verification', owner: 'Verifications', health: 'At risk', calls: '3 incoming', multiplier: '×2 repeat multiplier', flags: [fl('Passed around', 'other'), fl('Delay talk', 'neg')], last: 'Oct 27, 1:08 PM', team: 'Customer Service' },
+      { area: 'Patient Sales', status: 'WIP 13.1 · Ins. Cleared Urgent', owner: 'HRC', health: 'Watch', calls: '1 incoming', multiplier: 'No multiplier', flags: [fl('Short call', 'other')], last: 'Oct 25, 3:30 PM', team: 'HRC' }
+    ] : [
+      { area: 'Insurance Eligibility', status: 'Prior Auth hold', owner: 'RCM EVA', health: 'Poor', calls: '5 incoming', multiplier: '×3 repeat multiplier', flags: [fl('Cancellation', 'cancel'), fl('Delay talk', 'neg')], last: 'Today, 9:12 AM', team: 'Customer Service' },
+      { area: 'Logistics', status: 'Delivery Requested', owner: 'Logistics', health: 'Poor', calls: '3 incoming', multiplier: '×2 repeat multiplier', flags: [fl('Negative sentiment', 'neg'), fl('Passed around', 'other')], last: 'Yesterday, 2:40 PM', team: 'HRC' },
+      { area: 'Clinical Eligibility', status: 'Missing info hold', owner: 'HRC', health: 'At risk', calls: '2 incoming', multiplier: 'No multiplier', flags: [fl('Escalation', 'neg')], last: 'Oct 27, 11:05 AM', team: 'Customer Service' },
+      { area: 'Enrolled in CR', status: 'Converted / Enrolled in CR', owner: 'Clinical', health: 'Watch', calls: '1 incoming', multiplier: 'No multiplier', flags: [fl('Dropped incoming', 'other')], last: 'Oct 26, 4:22 PM', team: 'Customer Service' }
+    ];
+    rows.forEach(function (r) { r.healthStyle = H[r.health]; });
+    return {
+      rows: rows, areas: areas,
+      lobName: lob === 'ortho' ? 'Ortho' : 'Cardiac',
+      lobLower: lob === 'ortho' ? 'ortho' : 'cardiac',
+      repeatRule: lob === 'ortho' ? '[3]+ incoming calls in [14] days' : '[2]+ incoming calls in [7] days',
+      orthoOn: lob === 'ortho' ? 'true' : 'false', cardiacOn: lob === 'cardiac' ? 'true' : 'false',
+      orthoStyle: lob === 'ortho' ? on : off, cardiacStyle: lob === 'cardiac' ? on : off,
+      pickOrtho: function () { self.setState({ lob: 'ortho' }); },
+      pickCardiac: function () { self.setState({ lob: 'cardiac' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

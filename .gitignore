@@ -1,0 +1,14 @@
+# Dependencies & builds
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Secrets - never commit
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store

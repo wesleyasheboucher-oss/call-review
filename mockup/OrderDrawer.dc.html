@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Call Review order drill-down</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f8fafd}
+a{color:#2a65c7;text-decoration:none}a:hover{color:#2350a8}
+</style>
+</helmet>
+<div style="position: relative; min-height: 1180px; background: rgba(30,35,45,0.28); font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1e232d; display: flex; justify-content: flex-end">
+
+<!-- Drawer -->
+<section aria-label="Order call history" style="width: 100%; max-width: 1040px; min-height: 1180px; box-sizing: border-box; background: #f8fafd; border-left: 1px solid #e0e3e7; box-shadow: -12px 0 32px rgba(15,23,42,0.12); display: flex; flex-direction: column">
+
+<!-- Header -->
+<header style="background: #ffffff; border-bottom: 1px solid #e0e3e7; padding: 22px 28px; display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; justify-content: space-between">
+<div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 700">[Patient name]</h1>
+<span style="display: inline-flex; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #fde8e6; color: #a3241a">Poor health · Score [92]</span>
+<span style="display: inline-flex; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #eef1f5; color: #373b45">×3 repeat multiplier</span>
+</div>
+<p style="margin: 6px 0 0; font-size: 14px; color: #525761">[Order #] · Ortho · [Payer]</p>
+</div>
+<div style="display: flex; gap: 8px">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; border-radius: 8px; background: #ffffff; color: #1e232d; font-size: 14px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path></svg>Open full page</a>
+<a href="Main.dc.html" aria-label="Close" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid #e0e3e7; border-radius: 8px; background: #ffffff; color: #525761"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></a>
+</div>
+</header>
+
+<!-- Where the order is -->
+<div style="margin: 24px 28px 0; background: #ffffff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px">
+<div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+<div><div style="font-size: 12px; color: #525761">Area</div><div style="font-size: 18px; font-weight: 700; margin-top: 3px">Pending Auth</div></div>
+<div><div style="font-size: 12px; color: #525761">Order status</div><div style="font-size: 18px; font-weight: 700; margin-top: 3px">WIP 17 · Pending Authorization</div></div>
+<div><div style="font-size: 12px; color: #525761">Owner</div><div style="font-size: 18px; font-weight: 700; margin-top: 3px">HRC</div></div>
+<div><div style="font-size: 12px; color: #525761">In this status</div><div style="font-size: 18px; font-weight: 700; margin-top: 3px">[# days]</div></div>
+<div><div style="font-size: 12px; color: #525761">Surgery date</div><div style="font-size: 18px; font-weight: 700; margin-top: 3px">[Date]</div></div>
+</div>
+<ol aria-label="Ortho order sequence" style="list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+<li style="padding: 8px 6px; border-top: 4px solid #8fb3e8; font-size: 12px; color: #525761">Intake</li>
+<li style="padding: 8px 6px; border-top: 4px solid #8fb3e8; font-size: 12px; color: #525761">Verification</li>
+<li aria-current="step" style="padding: 8px 6px; border-top: 4px solid #2350a8; font-size: 12px; font-weight: 700; color: #2350a8">Pending Auth</li>
+<li style="padding: 8px 6px; border-top: 4px solid #e0e3e7; font-size: 12px; color: #525761">Patient Sales</li>
+<li style="padding: 8px 6px; border-top: 4px solid #e0e3e7; font-size: 12px; color: #525761">Cleared for Delivery</li>
+<li style="padding: 8px 6px; border-top: 4px solid #e0e3e7; font-size: 12px; color: #525761">Treatment</li>
+<li style="padding: 8px 6px; border-top: 4px solid #e0e3e7; font-size: 12px; color: #525761">Billing</li>
+</ol>
+<p style="margin: 10px 0 0; font-size: 13px; color: #525761">Each call below shows the area the order was in when the call happened.</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 20px 28px 24px; align-items: flex-start">
+
+<!-- Left: identity and why it's flagged -->
+<aside style="flex: 1 1 280px; max-width: 100%; display: flex; flex-direction: column; gap: 16px">
+<div style="background: #ffffff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px">
+<h2 style="margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #525761">Order</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; column-gap: 12px; font-size: 14px">
+<div><dt style="color: #525761; font-size: 12px">Phone on file</dt><dd style="margin: 2px 0 0">[(###) ###-####]</dd></div>
+<div><dt style="color: #525761; font-size: 12px">Line of business</dt><dd style="margin: 2px 0 0">Ortho</dd></div>
+<div><dt style="color: #525761; font-size: 12px">Order opened</dt><dd style="margin: 2px 0 0">[Date]</dd></div>
+<div><dt style="color: #525761; font-size: 12px">Payer</dt><dd style="margin: 2px 0 0">[Payer]</dd></div>
+<div><dt style="color: #525761; font-size: 12px">Rep</dt><dd style="margin: 2px 0 0">[Sales rep]</dd></div>
+<div><dt style="color: #525761; font-size: 12px">HRC</dt><dd style="margin: 2px 0 0">[Coordinator]</dd></div>
+</dl>
+</div>
+
+<div style="background: #ffffff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 18px 20px">
+<h2 style="margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #525761">Why it's flagged</h2>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="display: flex; justify-content: space-between"><span>Cancellation language</span><b>2 calls</b></div>
+<div style="display: flex; justify-content: space-between"><span>Negative sentiment</span><b>3 calls</b></div>
+<div style="display: flex; justify-content: space-between"><span>Escalation phrases</span><b>1 call</b></div>
+<div style="display: flex; justify-content: space-between"><span>Getting passed around</span><b>2 calls</b></div>
+<div style="display: flex; justify-content: space-between"><span>Dropped incoming</span><b>1 call</b></div>
+<div style="height: 1px; background: #e0e3e7; margin: 4px 0"></div>
+<div style="display: flex; justify-content: space-between"><span>Incoming calls, life of order</span><b>6</b></div>
+<div style="display: flex; justify-content: space-between"><span>Outgoing calls</span><b>4</b></div>
+</div>
+</div>
+</aside>
+
+<!-- Right: call timeline -->
+<div style="flex: 2 1 480px; min-width: 0; background: #ffffff; border: 1px solid #e0e3e7; border-radius: 12px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 20px; border-bottom: 1px solid #e0e3e7">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Calls on this order</h2>
+<div role="group" aria-label="Show" style="display: flex; border: 1px solid #e0e3e7; border-radius: 8px; overflow: hidden; font-size: 13px">
+<button type="button" style="padding: 7px 12px; border: 0; background: #eff6ff; color: #2350a8; font: inherit; font-weight: 600">Flagged</button>
+<button type="button" style="padding: 7px 12px; border: 0; border-left: 1px solid #e0e3e7; background: #ffffff; color: #373b45; font: inherit">All 10</button>
+</div>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0">
+<sc-for list="{{calls}}" as="c" hint-placeholder-count="4">
+<li style="padding: 18px 20px; border-top: 1px solid #e0e3e7; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<span style="{{c.dirStyle}}">{{c.dir}}</span>
+<b style="font-size: 14px">{{c.when}}</b>
+<span style="font-size: 13px; color: #525761">{{c.length}} · {{c.source}} · in {{c.area}}</span>
+<span style="margin-left: auto; font-size: 13px; color: #373b45">{{c.agent}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{c.flags}}" as="f" hint-placeholder-count="2">
+<span style="{{f.style}}">{{f.label}}</span>
+</sc-for>
+</div>
+<blockquote style="margin: 0; padding: 12px 14px; background: #f1f4f7; border-radius: 8px; font-size: 14px; line-height: 1.5; color: #373b45">{{c.snippet}}</blockquote>
+<a href="#" style="font-size: 13px; font-weight: 600">Open full transcript</a>
+</li>
+</sc-for>
+</ol>
+</div>
+
+</div>
+<p style="font-size: 12px; color: #5f636d; margin: 0 28px 24px">Sample content for layout only. Names, numbers and transcript lines are placeholders.</p>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var pill = 'display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600;';
+    var F = {
+      cancel: pill + 'background:#fde8e6;color:#a3241a;',
+      neg: pill + 'background:#faeacf;color:#8f5214;',
+      other: pill + 'background:#eef1f5;color:#373b45;'
+    };
+    var D = {
+      Incoming: pill + 'background:#dbe7fa;color:#2350a8;',
+      Outgoing: pill + 'background:#d3f5f5;color:#04585b;'
+    };
+    function fl(label, kind) { return { label: label, style: F[kind] }; }
+    var calls = [
+      { dir: 'Incoming', when: 'Today, 10:42 AM', length: '[mm:ss]', source: 'CXone', area: 'Pending Auth', agent: '[Agent] · Customer Service', flags: [fl('Cancellation', 'cancel'), fl('Negative sentiment', 'neg')], snippet: '[Transcript line that triggered the cancellation flag]' },
+      { dir: 'Incoming', when: 'Oct 28, 2:17 PM', length: '[mm:ss]', source: 'RingCentral', area: 'Pending Auth', agent: '[Agent] · HRC', flags: [fl('Escalation', 'neg'), fl('Passed around', 'other')], snippet: '[Transcript line that triggered the escalation flag]' },
+      { dir: 'Incoming', when: 'Oct 27, 9:03 AM', length: '[0:41]', source: 'CXone', area: 'Verification', agent: '[Agent] · Customer Service', flags: [fl('Dropped incoming', 'other')], snippet: '[Call dropped before resolution]' },
+      { dir: 'Incoming', when: 'Oct 24, 11:30 AM', length: '[mm:ss]', source: 'CXone', area: 'Verification', agent: '[Agent] · HRC', flags: [fl('Delay talk', 'neg'), fl('Negative sentiment', 'neg')], snippet: '[Transcript line that triggered the delay flag]' }
+    ];
+    calls.forEach(function (c) { c.dirStyle = D[c.dir]; });
+    return { calls: calls };
+  }
+}
+</script>
+</body>
+</html>

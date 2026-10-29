@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Call Review flag settings</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f8fafd}
+a{color:#2a65c7;text-decoration:none}a:hover{color:#2350a8}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1600px; background: #f8fafd; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1e232d">
+
+<!-- Sidebar -->
+<nav aria-label="ROM CRM" style="flex: 1 0 240px; max-width: 100%; box-sizing: border-box; background: #ffffff; border-right: 1px solid #e0e3e7; padding: 0 8px 24px; display: flex; flex-direction: column">
+<div style="height: 64px; display: flex; align-items: center; justify-content: center">
+<img src="./romcrm-logo.png" alt="ROM CRM" style="width: 200px; height: auto; filter: drop-shadow(0 1px 1px rgba(15,23,42,0.25)) drop-shadow(0 2px 4px rgba(15,23,42,0.18))">
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>ROM CRM</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 7px 12px; border-radius: 8px; font-size: 14px; color: #2a2f38"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#373b45" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>Home</a>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Market Access</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>ELCAP</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Sales</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Clinical Services</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>RCM</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Quality</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div>
+<a href="Main.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; padding: 7px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; color: #2350a8; background: #eff6ff"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2a65c7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call Review</a>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 12px 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #373b45"><span>Admin</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5f636d" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></div>
+</nav>
+
+<!-- Content -->
+<main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 24px 40px 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px">
+<div>
+<h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Call Review</h1>
+<p style="margin: 10px 0 0; font-size: 15px; color: #525761">Flag settings decide which calls count against an order and how much</p>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="font-size: 13px; color: #525761">Last changed by [Name] · [Date]</span>
+<button type="button" style="height: 38px; padding: 0 14px; border: 1px solid #e0e3e7; background: #fff; border-radius: 8px; font: inherit; font-size: 14px; color: #1e232d">Discard</button>
+<button type="button" style="height: 38px; padding: 0 16px; border: 0; background: #2350a8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 600; color: #fff">Save changes</button>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 24px">
+<div role="tablist" aria-label="Call Review views" style="display: flex; gap: 6px">
+<a href="Main.dc.html" role="tab" aria-selected="false" style="padding: 7px 12px; border-radius: 6px; color: #373b45; font-size: 14px">Overview</a>
+<a href="#" role="tab" aria-selected="false" style="padding: 7px 12px; border-radius: 6px; color: #373b45; font-size: 14px">Calls</a>
+<a href="#" role="tab" aria-selected="true" style="padding: 7px 12px; border-radius: 6px; background: #2350a8; color: #fff; font-size: 14px; font-weight: 600">Flag settings</a>
+</div>
+<div role="group" aria-label="Line of business" style="display: flex; padding: 3px; background: #f1f4f7; border: 1px solid #e0e3e7; border-radius: 8px">
+<button type="button" onClick="{{pickOrtho}}" aria-pressed="{{orthoOn}}" style="{{orthoStyle}}">Ortho</button>
+<button type="button" onClick="{{pickCardiac}}" aria-pressed="{{cardiacOn}}" style="{{cardiacStyle}}">Cardiac</button>
+</div>
+</div>
+<p style="margin: 14px 0 0; padding: 10px 14px; background: #eff6ff; border: 1px solid #dbe7fa; border-radius: 8px; font-size: 14px; color: #1d3c72">You're editing <b>{{lobName}}</b> settings. Ortho and cardiac keep separate flags, time windows and scoring.</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; margin-top: 20px">
+
+<!-- Repeat calls -->
+<section style="background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 20px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Repeat calls on the same order</h2>
+<p style="margin: 6px 0 16px; font-size: 13px; color: #525761">Counts incoming calls from any phone number on the order.</p>
+<fieldset style="border: 0; padding: 0; margin: 0 0 16px">
+<legend style="font-size: 13px; font-weight: 600; margin-bottom: 8px">Phone numbers to match</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px">
+<label style="display: flex; gap: 6px; align-items: center"><input type="checkbox" checked>Patient primary</label>
+<label style="display: flex; gap: 6px; align-items: center"><input type="checkbox" checked>Patient alternate</label>
+<label style="display: flex; gap: 6px; align-items: center"><input type="checkbox" checked>Caregiver / emergency contact</label>
+</div>
+</fieldset>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="font-size: 13px; font-weight: 600">Counts as repeat at<input type="text" value="{{repeatCount}}" style="display: block; width: 100%; box-sizing: border-box; margin-top: 6px; height: 38px; padding: 0 10px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400"></label>
+<label style="font-size: 13px; font-weight: 600">Within<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>{{repeatWindow}}</option><option>Life of the order</option></select></label>
+</div>
+<h3 style="margin: 18px 0 8px; font-size: 13px; font-weight: 600">Multiplier on the poor-health signal</h3>
+<table style="width: 100%; border-collapse: collapse; font-size: 14px">
+<thead><tr style="text-align: left; color: #525761; font-size: 12px"><th scope="col" style="padding: 6px 0; font-weight: 600">Incoming calls with flags</th><th scope="col" style="padding: 6px 0; font-weight: 600">Multiplier</th></tr></thead>
+<tbody>
+<sc-for list="{{mult}}" as="m" hint-placeholder-count="3">
+<tr style="border-top: 1px solid #e0e3e7"><td style="padding: 8px 0">{{m.calls}}</td><td style="padding: 8px 0"><input type="text" value="{{m.x}}" aria-label="Multiplier" style="width: 80px; height: 32px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 6px; font: inherit"></td></tr>
+</sc-for>
+</tbody>
+</table>
+</section>
+
+<!-- Dropped & short -->
+<section style="background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 20px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Dropped and short calls</h2>
+<p style="margin: 6px 0 16px; font-size: 13px; color: #525761">Uses call length and direction from CXone and RingCentral.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="font-size: 13px; font-weight: 600">Short call is under (seconds)<input type="text" value="{{shortSec}}" style="display: block; width: 100%; box-sizing: border-box; margin-top: 6px; height: 38px; padding: 0 10px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400"></label>
+<label style="font-size: 13px; font-weight: 600">Dropped means<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>Ended before resolution</option><option>Disconnected by system</option></select></label>
+<label style="font-size: 13px; font-weight: 600">Dropped incoming weight<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>High</option><option>Medium</option><option>Low</option></select></label>
+<label style="font-size: 13px; font-weight: 600">Dropped outgoing weight<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>Low</option><option>Medium</option><option>High</option></select></label>
+</div>
+<h2 style="margin: 24px 0 0; font-size: 16px; font-weight: 600">Sentiment</h2>
+<p style="margin: 6px 0 16px; font-size: 13px; color: #525761">Read across the whole call, caller's side only. Not single words.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="font-size: 13px; font-weight: 600">Flag when negative for over<input type="text" value="{{sentShare}}" style="display: block; width: 100%; box-sizing: border-box; margin-top: 6px; height: 38px; padding: 0 10px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400"></label>
+<label style="font-size: 13px; font-weight: 600">Or when the call ends<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>More negative than it started</option><option>Not used</option></select></label>
+<label style="font-size: 13px; font-weight: 600">Weight<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>Medium</option><option>High</option><option>Low</option></select></label>
+</div>
+</section>
+</div>
+
+<!-- Language flags -->
+<section style="margin-top: 16px; background: #fff; border: 1px solid #e0e3e7; border-radius: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding: 18px 20px; border-bottom: 1px solid #e0e3e7">
+<div>
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Language flags</h2>
+<p style="margin: 4px 0 0; font-size: 13px; color: #525761">Phrases include close variations. A flag can be limited to some areas of the order.</p>
+</div>
+<button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #bcd2f3; background: #eff6ff; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 600; color: #2350a8">+ Add flag</button>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 900px; border-collapse: collapse; font-size: 14px">
+<thead><tr style="background: #f1f4f7; text-align: left; color: #525761; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em">
+<th scope="col" style="padding: 10px 20px; font-weight: 600">On</th>
+<th scope="col" style="padding: 10px 12px; font-weight: 600">Flag</th>
+<th scope="col" style="padding: 10px 12px; font-weight: 600">Phrases</th>
+<th scope="col" style="padding: 10px 12px; font-weight: 600">Weight</th>
+<th scope="col" style="padding: 10px 12px; font-weight: 600">Direction</th>
+<th scope="col" style="padding: 10px 20px; font-weight: 600">Areas</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{flags}}" as="f" hint-placeholder-count="5">
+<tr style="border-top: 1px solid #e0e3e7">
+<td style="padding: 14px 20px; vertical-align: top"><input type="checkbox" checked aria-label="Flag on"></td>
+<td style="padding: 14px 12px; vertical-align: top; font-weight: 600">{{f.name}}</td>
+<td style="padding: 14px 12px; vertical-align: top"><div style="display: flex; flex-wrap: wrap; gap: 6px; max-width: 380px"><sc-for list="{{f.phrases}}" as="p" hint-placeholder-count="2"><span style="padding: 3px 9px; border-radius: 999px; background: #eef1f5; color: #373b45; font-size: 12px">{{p}}</span></sc-for><button type="button" style="padding: 3px 9px; border: 1px dashed #cdd1d7; border-radius: 999px; background: transparent; font: inherit; font-size: 12px; color: #2350a8">+ phrase</button></div></td>
+<td style="padding: 14px 12px; vertical-align: top">{{f.weight}}</td>
+<td style="padding: 14px 12px; vertical-align: top">{{f.dir}}</td>
+<td style="padding: 14px 20px; vertical-align: top; color: #373b45">{{f.areas}}</td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- Health thresholds -->
+<section style="margin-top: 16px; background: #fff; border: 1px solid #e0e3e7; border-radius: 12px; padding: 20px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Health score bands</h2>
+<p style="margin: 6px 0 16px; font-size: 13px; color: #525761">Score = flag weights × repeat multiplier. Bands decide the pill on each order.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+<label style="font-size: 13px; font-weight: 600"><span style="display: inline-flex; padding: 3px 9px; border-radius: 999px; background: #fde8e6; color: #a3241a; font-size: 12px">Poor</span> at or above<input type="text" value="{{poor}}" style="display: block; width: 100%; box-sizing: border-box; margin-top: 6px; height: 38px; padding: 0 10px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400"></label>
+<label style="font-size: 13px; font-weight: 600"><span style="display: inline-flex; padding: 3px 9px; border-radius: 999px; background: #faeacf; color: #8f5214; font-size: 12px">At risk</span> at or above<input type="text" value="{{risk}}" style="display: block; width: 100%; box-sizing: border-box; margin-top: 6px; height: 38px; padding: 0 10px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400"></label>
+<label style="font-size: 13px; font-weight: 600"><span style="display: inline-flex; padding: 3px 9px; border-radius: 999px; background: #dcf2ff; color: #005993; font-size: 12px">Watch</span> at or above<input type="text" value="{{watch}}" style="display: block; width: 100%; box-sizing: border-box; margin-top: 6px; height: 38px; padding: 0 10px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400"></label>
+<label style="font-size: 13px; font-weight: 600">Score resets after<select style="display: block; width: 100%; margin-top: 6px; height: 38px; padding: 0 8px; border: 1px solid #cdd1d7; border-radius: 8px; font: inherit; font-weight: 400; background: #fff"><option>{{reset}}</option><option>Never</option></select></label>
+</div>
+</section>
+<p style="font-size: 12px; color: #5f636d; margin: 12px 4px 0">All numbers and cardiac phrases are placeholders for ops to set.</p>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { lob: 'ortho' }; }
+  renderVals() {
+    var self = this;
+    var o = this.state.lob === 'ortho';
+    var seg = 'padding:6px 16px;border:0;border-radius:6px;font:inherit;font-size:14px;cursor:pointer;';
+    var on = seg + 'background:#ffffff;color:#2350a8;font-weight:600;box-shadow:0 1px 2px rgba(15,23,42,0.12);';
+    var off = seg + 'background:transparent;color:#525761;';
+    var flags = o ? [
+      { name: 'Cancellation', phrases: ['cancel', 'cancel my order', "don't send it"], weight: 'High', dir: 'Incoming', areas: 'All areas' },
+      { name: 'Escalation', phrases: ['supervisor', 'manager', 'complaint', 'lawyer'], weight: 'High', dir: 'Both', areas: 'All areas' },
+      { name: 'Delay talk', phrases: ['still waiting', "haven't received", "where's my device"], weight: 'Medium', dir: 'Incoming', areas: 'Pending Auth, Cleared for Delivery' },
+      { name: 'Passed around', phrases: ['I already told someone', 'nobody called me back'], weight: 'Medium', dir: 'Incoming', areas: 'All areas' },
+      { name: 'Negative words', phrases: ['angry', 'upset', 'frustrated'], weight: 'Low', dir: 'Both', areas: 'All areas' }
+    ] : [
+      { name: 'Cancellation', phrases: ['cancel', 'stop the program', '[cardiac phrase]'], weight: 'High', dir: 'Incoming', areas: 'All areas' },
+      { name: 'Escalation', phrases: ['supervisor', 'manager', 'complaint', 'lawyer'], weight: 'High', dir: 'Both', areas: 'All areas' },
+      { name: 'Delay talk', phrases: ['still waiting', '[cardiac phrase]'], weight: 'Medium', dir: 'Incoming', areas: 'Insurance Eligibility, Logistics' },
+      { name: 'Passed around', phrases: ['I already told someone', 'nobody called me back'], weight: 'Medium', dir: 'Incoming', areas: 'All areas' },
+      { name: 'Negative words', phrases: ['angry', 'upset', 'frustrated'], weight: 'Low', dir: 'Both', areas: 'All areas' }
+    ];
+    return {
+      flags: flags,
+      lobName: o ? 'Ortho' : 'Cardiac',
+      repeatCount: o ? '3 incoming calls' : '2 incoming calls',
+      repeatWindow: o ? '14 days' : '7 days',
+      mult: o ? [{ calls: '2 calls', x: '×1.5' }, { calls: '3 calls', x: '×2' }, { calls: '4 or more', x: '×3' }] : [{ calls: '2 calls', x: '×2' }, { calls: '3 or more', x: '×3' }],
+      shortSec: o ? '45' : '30',
+      sentShare: o ? '40% of the call' : '30% of the call',
+      poor: o ? '80' : '70', risk: o ? '50' : '45', watch: o ? '30' : '25',
+      reset: o ? '30 days with no flags' : '14 days with no flags',
+      orthoOn: o ? 'true' : 'false', cardiacOn: o ? 'false' : 'true',
+      orthoStyle: o ? on : off, cardiacStyle: o ? off : on,
+      pickOrtho: function () { self.setState({ lob: 'ortho' }); },
+      pickCardiac: function () { self.setState({ lob: 'cardiac' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

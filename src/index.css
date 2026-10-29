@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Theme: ROM CRM.
+   Values sampled from the CRM itself so this module reads as part of it.
+     page #f8fafd · panel #f1f4f7 · border #e0e3e7
+     text #1e232d / #525761 / #5f636d · link + accent #2a65c7 · navy #2350a8
+     badges: sky #dcf2ff/#005993 · teal #d3f5f5/#04585b · green #d8f6dd/#1c5f31
+             neutral #eef1f5/#525761 · orange #d28425
+   Tailwind's default families are remapped onto that palette so every
+   existing utility lands on a CRM colour: violet/indigo -> brand blue,
+   purple -> CRM teal, emerald -> CRM green.
+   --------------------------------------------------------------------------- */
+@theme {
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Primary: CRM link blue (600) and navy (700) */
+  --color-brand-50:  #eff6ff;
+  --color-brand-100: #dbe7fa;
+  --color-brand-200: #bcd2f3;
+  --color-brand-300: #8fb3e8;
+  --color-brand-400: #5b8cd9;
+  --color-brand-500: #3a72cf;
+  --color-brand-600: #2a65c7;
+  --color-brand-700: #2350a8;
+  --color-brand-800: #1f4489;
+  --color-brand-900: #1d3c72;
+  --color-brand-950: #13284d;
+
+  /* Neutrals */
+  --color-slate-50:  #f8fafd;
+  --color-slate-100: #f1f4f7;
+  --color-slate-200: #e0e3e7;
+  --color-slate-300: #cdd1d7;
+  --color-slate-400: #8d929b;
+  --color-slate-500: #5f636d;
+  --color-slate-600: #525761;
+  --color-slate-700: #373b45;
+  --color-slate-800: #2a2f38;
+  --color-slate-900: #1e232d;
+  --color-slate-950: #141821;
+  --color-gray-50:  #f8fafd;
+  --color-gray-100: #f1f4f7;
+  --color-gray-200: #e0e3e7;
+  --color-gray-300: #cdd1d7;
+  --color-gray-400: #8d929b;
+  --color-gray-500: #5f636d;
+  --color-gray-600: #525761;
+  --color-gray-700: #373b45;
+  --color-gray-800: #2a2f38;
+  --color-gray-900: #1e232d;
+
+  /* Accent families folded into brand blue */
+  --color-violet-50:  #eff6ff;
+  --color-violet-100: #dbe7fa;
+  --color-violet-200: #bcd2f3;
+  --color-violet-300: #8fb3e8;
+  --color-violet-400: #5b8cd9;
+  --color-violet-500: #3a72cf;
+  --color-violet-600: #2a65c7;
+  --color-violet-700: #2350a8;
+  --color-violet-800: #1f4489;
+  --color-violet-900: #1d3c72;
+  --color-indigo-50:  #eff6ff;
+  --color-indigo-100: #dbe7fa;
+  --color-indigo-200: #bcd2f3;
+  --color-indigo-300: #8fb3e8;
+  --color-indigo-400: #5b8cd9;
+  --color-indigo-500: #3a72cf;
+  --color-indigo-600: #2a65c7;
+  --color-indigo-700: #2350a8;
+  --color-indigo-800: #1f4489;
+  --color-indigo-900: #1d3c72;
+  --color-blue-50:  #eff6ff;
+  --color-blue-100: #dbe7fa;
+  --color-blue-200: #bcd2f3;
+  --color-blue-300: #8fb3e8;
+  --color-blue-400: #5b8cd9;
+  --color-blue-500: #3a72cf;
+  --color-blue-600: #2a65c7;
+  --color-blue-700: #2350a8;
+  --color-blue-800: #1f4489;
+  --color-blue-900: #1d3c72;
+
+  /* CRM teal (also used wherever the app said "purple") */
+  --color-teal-50:  #effbfb;
+  --color-teal-100: #d3f5f5;
+  --color-teal-200: #a8e7e8;
+  --color-teal-300: #6fd0d2;
+  --color-teal-400: #34b0b3;
+  --color-teal-500: #138f92;
+  --color-teal-600: #0a7376;
+  --color-teal-700: #04585b;
+  --color-teal-800: #06494b;
+  --color-teal-900: #083d3f;
+  --color-purple-50:  #effbfb;
+  --color-purple-100: #d3f5f5;
+  --color-purple-200: #a8e7e8;
+  --color-purple-300: #6fd0d2;
+  --color-purple-400: #34b0b3;
+  --color-purple-500: #138f92;
+  --color-purple-600: #0a7376;
+  --color-purple-700: #04585b;
+  --color-purple-800: #06494b;
+  --color-purple-900: #083d3f;
+  --color-purple-950: #052b2c;
+
+  /* CRM sky (type badges) */
+  --color-sky-50:  #f0f9ff;
+  --color-sky-100: #dcf2ff;
+  --color-sky-200: #b6e2fb;
+  --color-sky-300: #7ecaf4;
+  --color-sky-400: #3eaee8;
+  --color-sky-500: #1690d0;
+  --color-sky-600: #0674b0;
+  --color-sky-700: #005993;
+  --color-sky-800: #064a78;
+  --color-sky-900: #0b3e63;
+  --color-cyan-50:  #f0f9ff;
+  --color-cyan-100: #dcf2ff;
+  --color-cyan-200: #b6e2fb;
+  --color-cyan-300: #7ecaf4;
+  --color-cyan-400: #3eaee8;
+  --color-cyan-500: #1690d0;
+  --color-cyan-600: #0674b0;
+  --color-cyan-700: #005993;
+  --color-cyan-800: #064a78;
+  --color-cyan-900: #0b3e63;
+
+  /* CRM green (status / counts) */
+  --color-emerald-50:  #effbf1;
+  --color-emerald-100: #d8f6dd;
+  --color-emerald-200: #b1ebbc;
+  --color-emerald-300: #7cd892;
+  --color-emerald-400: #45bd63;
+  --color-emerald-500: #24a047;
+  --color-emerald-600: #1b8139;
+  --color-emerald-700: #1c5f31;
+  --color-emerald-800: #194f2a;
+  --color-emerald-900: #164124;
+  --color-green-50:  #effbf1;
+  --color-green-100: #d8f6dd;
+  --color-green-200: #b1ebbc;
+  --color-green-300: #7cd892;
+  --color-green-400: #45bd63;
+  --color-green-500: #24a047;
+  --color-green-600: #1b8139;
+  --color-green-700: #1c5f31;
+  --color-green-800: #194f2a;
+  --color-green-900: #164124;
+
+  /* CRM orange (pre-treatment bar, warnings) */
+  --color-amber-50:  #fdf6ec;
+  --color-amber-100: #faeacf;
+  --color-amber-200: #f4d3a1;
+  --color-amber-300: #ecb767;
+  --color-amber-400: #e29c3d;
+  --color-amber-500: #d28425;
+  --color-amber-600: #b46a17;
+  --color-amber-700: #8f5214;
+  --color-amber-800: #744317;
+  --color-amber-900: #603818;
+  --color-orange-50:  #fdf6ec;
+  --color-orange-100: #faeacf;
+  --color-orange-200: #f4d3a1;
+  --color-orange-300: #ecb767;
+  --color-orange-400: #e29c3d;
+  --color-orange-500: #d28425;
+  --color-orange-600: #b46a17;
+  --color-orange-700: #8f5214;
+  --color-orange-800: #744317;
+  --color-orange-900: #603818;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------------------------
+   Overlay + drawer motion.
+   Content panels slide in from the right; confirmations still fade in place.
+   (animate-fade-in was referenced throughout but never defined - it is now.)
+   --------------------------------------------------------------------------- */
+@keyframes pih-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pih-drawer-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: pih-fade-in 0.18s ease-out;
+}
+
+.animate-drawer-right {
+  animation: pih-drawer-in-right 0.26s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
+}
+
+/* Bottom sheet (the document viewer): slides up from the bottom edge and floats over the page. */
+@keyframes pih-sheet-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.animate-sheet-up {
+  animation: pih-sheet-up 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
+}
+
+/* Scrolls, but without a visible scroll bar (the sidebar: its edge carries the collapse button). */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-drawer-right,
+  .animate-sheet-up {
+    animation: none;
+  }
+}
